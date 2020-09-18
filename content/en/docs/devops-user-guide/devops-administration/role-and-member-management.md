@@ -7,18 +7,18 @@ description: 'Role and Member Management'
 weight: 2240
 ---
 
-This guide demonstrates how to management roles and members in your devops project. For the overview of KubeSphere roles, see the [Overview of Role Management](../todo). 
+This guide demonstrates how to manage roles and members in your DevOps project. For the overview of KubeSphere roles, see the [Overview of Role Management](../todo). 
 
-In devops project scope, you can grant the following resources' permissions to a role:
+In DevOps project scope, you can grant the following resources' permissions to a role:
 
-- Pipelines Management
-- Credentials Management
+- Pipelines
+- Credentials
 - DevOps Settings
 - Access Control
 
 ## Prerequisites
 
-At least one devops project has been created, such as `demo-devops`. And you need an account of the `devops-admin` role. See the [Create Workspace, Project, Account and Role](../../../quick-start/create-workspace-and-project/) if not yet.
+At least one DevOps project has been created, such as `demo-devops`. And you need an account of the `devops-admin` role. See the [Create Workspace, Project, Account and Role](../../../quick-start/create-workspace-and-project/) if not yet.
 
 ## Create a DevOps Project Role
 
@@ -43,9 +43,15 @@ Click **Edit Authorization** to continue.
 
 ![Edit Roles](/images/docs/devops-admin/devops_role_list.png)
 
+{{< notice note >}} 
+
+The role of `pipeline-creator` is only granted with Pipeline create/view permission, which may not satisfy your demand. This example is only for demonstration purpose. You can create customized roles based on your needs.
+
+{{</ notice >}} 
+
 ## Built-in roles
 
-In **Project Roles**, there are three available built-in roles as shown below. Built-in roles are created automatically by KubeSphere when creating the devops project and they cannot be edited or deleted.
+In **Project Roles**, there are three available built-in roles as shown below. Built-in roles are created automatically by KubeSphere when creating the DevOps project and they cannot be edited or deleted.
 
 | Built-in Roles     | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
@@ -57,19 +63,19 @@ In **Project Roles**, there are three available built-in roles as shown below. B
 
 1. In **Project Management**, select **Project Members** and click **Invite Member**.
 
-2. Invite a user to the devops project. Grant him the role of `pipeline-creator`. 
+2. Invite a user to the DevOps project. Grant the role of `pipeline-creator` to the user. 
 
 ![invite member](/images/docs/devops-admin/devops_invite_member.png)
 
 {{< notice note >}} 
 
-The user must be invited to the devops project's workspace first.
+The user must be invited to the DevOps project's workspace first.
 
 {{</ notice >}} 
 
-3. After you add a user to the devops project, click **OK**. In **Project Members**, you can see the newly invited member listed.
+3. After you add a user to the DevOps project, click **OK**. In **Project Members**, you can see the newly invited member listed.
 
-4. You can also change the role of an existing member by editing it or remove it from the devops project.
+4. You can also change the role of an existing member by editing it or remove it from the DevOps project.
 
 ![edit member role](/images/docs/devops-admin/devops_user_edit.png)
 
